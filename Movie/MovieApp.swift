@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct MovieApp: App {
+    @AppStorage("onBoarding") var isonBoarding: Bool = true
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if isonBoarding{
+                //Somescreen
+                onBoardView()
+            }else{
+                ContentView()
+            }
         }
     }
 }

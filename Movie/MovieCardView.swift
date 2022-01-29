@@ -8,15 +8,16 @@
 import SwiftUI
 
 struct MovieCardView: View {
+    var movie: Movie
     var body: some View {
         ZStack{
-            Image("spider-man").resizable().scaledToFill()
+            Image(movie.image).resizable().scaledToFill()
         }
     }
 }
 
 struct MovieCardView_Previews: PreviewProvider {
     static var previews: some View {
-        MovieCardView()
+        MovieCardView(movie: actionMovieData[0])
     }
 }

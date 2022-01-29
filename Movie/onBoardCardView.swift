@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct onBoardCardView: View {
+    var movie: Movie
     var body: some View {
         ZStack{
-            Image("spider-man").resizable().scaledToFill()
+            Image(movie.image).resizable().scaledToFill()
             VStack{
                 Spacer()
                 StartButtonView().padding(50)
@@ -21,6 +22,6 @@ struct onBoardCardView: View {
 
 struct onBoardCardView_Previews: PreviewProvider {
     static var previews: some View {
-        onBoardCardView()
+        onBoardCardView(movie: actionMovieData[0])
     }
 }

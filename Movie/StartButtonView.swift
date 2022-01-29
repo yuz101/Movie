@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct StartButtonView: View {
+    @AppStorage("onBoarding") var isonBoarding: Bool?
     var body: some View {
         ZStack{
             Button(action: {
                 //What to Perform
+                isonBoarding = false
             }) {
                 HStack{
                     Text("Get Started")
